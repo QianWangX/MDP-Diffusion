@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title> MDP: A Generalized Framework for Text-Guided Image Editing by Manipulating the Diffusion Path </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="box_swipe.css">
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <script src="box_swipe.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Segoe+UI" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="n-header">
+    </div>
+    <div class="n-title">
+        <h1> MDP: A Generalized Framework for Text-Guided Image Editing by Manipulating the Diffusion Path</h1>
+        <h2 id="abstract" class="center"> Paper ID: 9189 </h2>
+    </div>
+    <div class="l-article video">
+        <img src="figures/teaser.png" width="80%" class="center"/>
+        <div class="videocaption">
+            <div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- SECTION: MAIN BODY -->
+    <div class="n-article">
+        <!-- teaser -->
+        <!-- abstract -->
+        <h2 id="abstract"> Abstract </h2>
+        <p> Image generation using diffusion can be controlled in multiple ways. 
+            In this paper, we systematically analyze the equations of modern generative diffusion networks to propose a framework, 
+            called MDP, that explains the design space of suitable manipulations. 
+            We identify 5 different manipulations, including intermediate latent, conditional embedding, 
+            cross attention maps, guidance, and predicted noise. 
+            We analyze the corresponding parameters of these manipulations 
+            and the manipulation schedule. We show that some previous editing methods fit nicely into our framework. 
+            Particularly, we identified one specific configuration as a 
+            new type of control by manipulating the predicted noise, which 
+            can perform higher-quality edits than previous work for a variety of local and global edits.  </p>
+        <!-- paper links -->
+        <h2 id="Manipulations"> Manipulations </h2>
+        <p> We test with 5 Manipulations in the design space, namely: <br>
+            MDP-$x_t$: intermediate latent interpolation. <br> 
+            MDP-$c$: conditional embedding interpolation. <br>
+            P2P (Prompt-to-Prompt): cross attention manipulation. <br>
+            MDP-$\beta$: guidance. <br>
+            <b>MDP-$\epsilon_t$</b>: predicted noise interpolation. <br>
+            Comparisons between different manipulations can be found in our paper. In this website, 
+            we provide the comparisons between P2P and our highlighted manipulation MDP-$\epsilon_t$.
+        </p>
+
+
+        <h2 id="videos"> Qualitative results </h2>
+        <p>
+        <h3>Local editing</h3>
+        </p>
+        <div class="l-article video">
+            <img src="figures/local-changing-object.png" width="100%" />
+            <div class="videocaption">
+                <div>
+                </div>
+            </div>
+        </div>
+        <p> Results of <b> changing object(s) </b> comparing Prompt-to-Prompt and our method. </p>
+        <div class="l-article video">
+            <img src="figures/local-adding-object.png" width="100%" />
+            <div class="videocaption">
+                <div>
+                </div>
+            </div>
+        </div>
+        <p> Results of <b> adding object(s) </b> comparing Prompt-to-Prompt and our method. </p>
+        <div class="l-article video">
+            <img src="figures/local-changing-attributes.png" width="100%" />
+            <div class="videocaption">
+                <div>
+                </div>
+            </div>
+        </div>
+        <p> Results of <b> changing attribute </b> comparing Prompt-to-Prompt and our method. </p>
+        <div class="l-article video">
+            <img src="figures/local-removing-object.png" width="100%" />
+            <div class="videocaption">
+                <div>
+                </div>
+            </div>
+        </div>
+        <p> Results of <b> removing object(s) </b> comparing Prompt-to-Prompt and our method. </p>
+        <div class="l-article video">
+            <img src="figures/local-mixing-objects.png" width="100%" />
+            <div class="videocaption">
+                <div>
+                </div>
+            </div>
+        </div>
+        <p> Results of <b> mixing objects </b> comparing Prompt-to-Prompt and our method. </p>
+        <p>
+        <h3>Global editing</h3>
+        </p>
+        <div class="l-article video">
+            <img src="figures/global-changing-background.png" width="100%" />
+            <div class="videocaption">
+                <div>
+                </div>
+            </div>
+        </div>
+        <p> Results of <b> changing background </b> comparing Prompt-to-Prompt and our method. </p>
+        <div class="l-article video">
+            <img src="figures/global-in-domain-transfer.png" width="100%" />
+            <div class="videocaption">
+                <div>
+                </div>
+            </div>
+        </div>
+        <p> Results of <b> in-domain transfer </b> comparing Prompt-to-Prompt and our method. </p>
+        <div class="l-article video">
+            <img src="figures/global-out-domain-transfer.png" width="100%" />
+            <div class="videocaption">
+                <div>
+                </div>
+            </div>
+        </div>
+        <p> Results of <b> out-domain transfer </b> comparing Prompt-to-Prompt and our method. </p>
+        <div class="l-article video">
+            <img src="figures/global-stylization.png" width="100%" />
+            <div class="videocaption">
+                <div>
+                </div>
+            </div>
+        </div>
+        <p> Results of <b> stylization </b> comparing Prompt-to-Prompt and our method. </p>
+        
+
+
+        <h2 id="Source of images"> Source of images </h2>
+        <p> All the input images tested in the paper are real world from <a
+            href="https://unsplash.com/" target="_blank">Unsplash</a>, <a
+            href="https://www.flickr.com/" target="_blank">Flickr</a> or <a
+            href="https://cocodataset.org/#home" target="_blank">COCO dataset.</a> </p>
+
+    </div>
+    <div class="n-footer">
+    </div>
+</body>
+
+</html>
