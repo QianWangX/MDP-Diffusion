@@ -84,6 +84,27 @@
             we provide the comparisons between P2P and our highlighted manipulation MDP-$\epsilon_t$.
         </p>
 
+        <h2 id="Manipulations"> MDP-$\epsilon_t$ </h2>
+        <div class="l-article video">
+            <img src="figures/pipeline_epsilon.jpg" width="100%" />
+            <div class="videocaption">
+                <div>
+                </div>
+            </div>
+        </div>
+        <p>
+            We use an example to demonstrate the idea of MDP-$\epsilon_t$: predicted noise interpolation.
+            The top branch is inverted from a real image 
+            given condition $\mathbf{c}^{(A)}$ 
+            "<i>Photo of a rabbit on the grass</i>". 
+            The bottom branch is generated using condition $\mathbf{c}^{(B)}$ 
+            "<i>Photo of a rabbit in a library</i>". 
+            We copy the predicted noise from step $t_{max}$ 
+            to $t_{min}$ of the top branch, 
+            then use $\mathbf{c}^{(B)}$ to 
+            denoise and generate the images in the middle branch.
+        </p>
+
 
         <h2 id="videos"> Qualitative results </h2>
         <p>
@@ -174,7 +195,7 @@
             href="https://cocodataset.org/#home" target="_blank">COCO dataset.</a> </p> -->
         
         <h2 id="acknowledgments"> Acknowledgments </h2>
-        <p> All the input images tested in the paper are real world from <a
+        <p> All the input images tested in the paper are real world images from either <a
             href="https://unsplash.com/" target="_blank">Unsplash</a>, <a
             href="https://www.flickr.com/" target="_blank">Flickr</a> or <a
             href="https://cocodataset.org/#home" target="_blank">COCO dataset.</a> We base this website off of the <a
