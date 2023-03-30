@@ -14,3 +14,15 @@ conda env create -f environment.yml
 ```
 2. Play around with MDP.ipynb. We provide the implementation of MDP-epsilon_t.
 
+## Citation
+
+```
+@misc{wang2023mdp,
+      title={MDP: A Generalized Framework for Text-Guided Image Editing by Manipulating the Diffusion Path}, 
+      author={Qian Wang and Biao Zhang and Michael Birsak and Peter Wonka},
+      year={2023},
+      eprint={2303.16765},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
